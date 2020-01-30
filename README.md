@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `make dev`
+Runs the app in devleopment in a local docker container with all depenecies installed
+Open http://localhost:3001 to view it in the browser
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
