@@ -4,17 +4,18 @@ node_js:
 cache:
   directories:
   - node_modules
+env:
+  global:
+    - PATH=$HOME/.local/bin:$PATH
+befroe_install:
+  - pyenv global 3.7.1
+  - pip install -U pip
+  - pip install awscli
 script:
 - npm test
 - npm run build
 deploy:
-  provider: s3
-  skip_cleanup: true
-  access_key_id: AKIA6BDIZ4SOCXF7B4EM
-  secret_access_key:
-    secure: dFoR0Q8kG+cULnlN0fDlfwq2TBbuo0ABL8oM3lPM/qCNzOQ5jBjJrhTh0f4NcJ06yKY4FUPDhzD3NOk9JgnUvE+SLXJegC1djS7BfZEiDMjiLjRiCie1aXbhtJXxfiknLmXrzybS3JrcarogS7z8m0H5iS8ikSY/+UuvmNyaLf4Ot4QymbzxpRh+n5CLnUioNjOIIMtqvHYWx2qR6nFbbk9sOHXZXoycBYP1z0bT0yt9g3xKxaBErOnA6IniHWusH0fJ6KiXEa846mDfoAyUzL37yrxnvcoKr/HpN3AIpyfTQQv9XUkab0+d5Mjk0U9+HQx1kkZEkrwilDs6YRwj0Ivbrp5HuB3BviDGeU9hEGTLXBr/MQBbcOQ1BoKe1c3frmFM/BevGtGnMfinni6aRcHg3SOyGSgAYlI4bXEbgU6lOEqw3wIyKnATyATK45/EY8dovXSlzNGLn2eftUc/yekgXcPbGvCJQrUxPF922WNqcHOomWyS1z7S6LrWU/9huZ3JNGi0jAYgIZ4Pxz9VRMsqR2z4Net9sRye0aQqHXmmgc/RryTi+UtHtO9CGploDQQDl0Y92+j5FG9CgDCR8r6I7XBWf+E1hiSFGc+h5v2eA73PoYpaWu+R0K/f/IxXv6REsjedTmYslFlDPV8R3AAIIRkpb5J5jWdmUdhSvO8=
-  bucket: element84-react-prod
-  local-dir: "./build"
-  acl: ''
+  provider: script
+  script: deploys/deploy_script.sh
   on:
     branch: master
