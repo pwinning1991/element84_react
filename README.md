@@ -8,7 +8,7 @@ In the project directory, you can run:
 Runs all the app tests in a docker container and displys results in shell
 
 ### `make dev`
-Runs the app in devleopment in a local docker container with all depenecies installed />
+Runs the app in devleopment in a local docker container with all depenecies installed.<br />
 Open http://localhost:3001 to view it in the browser
 
 ### `yarn start`
