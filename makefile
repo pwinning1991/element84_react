@@ -1,4 +1,4 @@
-.PHONY: dev
+.PHONY: dev local_test
 
 dev:
 	@docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm pwinnington/element84
