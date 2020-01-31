@@ -29,4 +29,4 @@ deploy:
     local_dir: ./build
     region: us-east-1
     on:
-    branch: development
+      branch: development
