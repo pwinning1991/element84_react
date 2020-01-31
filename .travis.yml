@@ -8,8 +8,8 @@ script:
   - npm test
   - npm run build
 deploy:
-  skip_cleanup: true
   provider: s3
+  skip_cleanup: true
   access_key_id:
     secure: "njOQhvka1Dqr26v7j48vQRfzvhrivA8869glHxrtBhi8P62OJCLY5ugSTOrHNzb3WUI5UXqlTSNJ4UOHPEmZOWk0P8yOqQu5G+NzJCSkCAYWcjnaYUFlJSFDRSuGj4n5yDNSzaeFzUQvF62Aj3Tst5yzrV6t52GmzxtIQBl2Am69/LTMdxIQA2TaJSdxiL7iKQgKe2EwPZDpfm+X6jVaUI3/sSk3LMSVn3D/MySMfE17WsUl/19Q2KzIh/JSo+9C+rKVtujzagqZ4Y6hkzoCOH6NB2lxm5ZDwVRJjd32wEMHGHme3PUt5PVZuFWQrUyFGD29Eft8fdnDCgP8CiVJfcvIoPkO2j7/ORPldmY4ivfhFHcr1jkfMFoPoX+JcNYoicJGWyoGRkx61HdwfQstvXRnDRktkjmQCaTPZZpyDMO7YPMosxQkgXyFjYvLpqSoh1YE8y28Gnu3Ki+7WsG/ynXtHaMsujtxMVomvI0mfTRvMmfrI15BiE4U+y9w8EHeZSbtvT8sGlMXrX7dwKfiIb9gPh0IIuJmuRmoxP333QT66eznHVWWtz08k2wgI6A7B7fTKlAEcG7mJOkvOMhYJGUw4ZO/hH8FtaNn9AZ0HGza9jCHlLdAgyZKUKdBPw9tPhxSq/+suXtyaGNqhrSQbccgspQWOPCQ8QmhSzByTAg="
   secret_access_key:
