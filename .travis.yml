@@ -16,13 +16,13 @@ deploy:
   region: us-east-1
   local_dir: .build/
   overwrite: true
-on:
-  branch: development
+  on:
+    branch: development
 deploy:
   provider: s3
   bucket: element84-react-prod
   region: us-east-1
   local_dir: .build/
   overwrite: true
-on:
-  branch: master
+  on:
+    branch: master
