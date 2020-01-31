@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+deploy:
+  provider: s3
+  bucket: element84-react-test
+  region: us-east-1
+  local_dir: .build/
+  overwrite: true
+on:
+  branch: development
+deploy:
+  provider: s3
+  bucket: element84-react-prod
+  region: us-east-1
+  local_dir: .build/
+  overwrite: true
+on:
+  branch: master
