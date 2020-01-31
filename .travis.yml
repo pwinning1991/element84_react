@@ -15,7 +15,11 @@ script:
 - npm test
 - npm run build
 deploy:
-  provider: script
-  script: deploys/deploy_script.sh
-  on:
-    branch: master
+  - provider: script
+    script: deploys/deploy_script.sh
+    on:
+      branch: master
+  - provider: script
+    script: deploys/deploy_script_dev.sh
+    on:
+      branch: developoment
