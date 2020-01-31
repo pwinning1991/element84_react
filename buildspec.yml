@@ -1,0 +1,12 @@
+version: 0.2
+
+install:
+    runtime-versions:
+      npm: 12.2.0
+
+phases:
+  build:
+    commands:
+       - npm test 
+       -  npm run build
+
